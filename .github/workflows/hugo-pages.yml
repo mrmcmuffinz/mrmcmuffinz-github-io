@@ -1,20 +1,32 @@
+name: Build and Deploy Hugo site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main          # run on pushes to main
+  workflow_dispatch:  # allow manual runs from Actions tab
+
+permissions:
+  contents: read      # allow reading the repo
+  pages: write        # allow writing to GitHub Pages
+  id-token: write     # required for deploy-pages
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
-  build-deploy:
+  build:
     runs-on: ubuntu-latest
 
-    permissions:
-      contents: write
-      pages: write
-      id-token: write
-
     env:
-      HUGO_VERSION: "0.152.2"
+      HUGO_VERSION: 0.152.2
 
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          submodules: true
+          submodules: true   # IMPORTANT: pull Blowfish theme
           fetch-depth: 0
 
       - name: Install Hugo
@@ -23,14 +35,22 @@ jobs:
           hugo-version: ${{ env.HUGO_VERSION }}
           extended: true
 
-      - name: Build Hugo site
+      - name: Build site
         run: hugo --minify
 
-      - name: Upload artifact
+      - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
 
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
