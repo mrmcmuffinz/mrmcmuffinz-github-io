@@ -1,0 +1,29 @@
+disabled = false
+languageCode = "en"
+languageName = "English"
+weight = 1
+title = "Home"
+
+[params]
+  displayName = "EN"
+  isoCode = "en"
+  rtl = false
+  dateFormat = "2 January 2006"
+  description = "DevOps, homelab, and automation notes by Abraham Cabrera."
+  defaultSocialImage = "img/social-card-muffin-1200x630.png"
+
+[params.author]
+  name = "Abraham Cabrera"
+  image = "img/studio_ghibli_abraham_cabrera_profile_picture.png"
+  imageQuality = 96
+
+  headline = "DevOps engineer building reliable infra & homelabs."
+  bio = "Builder. Thinker. Automator. I home-lab, code things, break them, fix them, then write about it."
+
+  links = [
+     { dev = "https://dev.to/cabraham2026devto" },
+     { github = "https://github.com/mrmcmuffinz" },
+     { linkedin = "https://www.linkedin.com/in/abrahamcabrera/" },
+     { steam = "https://steamcommunity.com/id/MrMcMuffins/" },
+     { youtube = "https://www.youtube.com/@cabraham2026" }
+  ]

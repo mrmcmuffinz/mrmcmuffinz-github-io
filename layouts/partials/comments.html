@@ -1,0 +1,6 @@
+{{- if .Site.IsServer -}}
+  <!-- Optional: don’t show Disqus on localhost -->
+  <p>Comments are disabled in local development.</p>
+{{- else -}}
+  {{ template "_internal/disqus.html" . }}
+{{- end -}}
