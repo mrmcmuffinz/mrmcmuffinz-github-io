@@ -2,6 +2,7 @@
 title = "About"
 menu = "main"
 weight = 10
+showComments = false
 +++
 
 I am a highly driven and detail-oriented technologist with a deep passion for DevOps, cloud-native infrastructure, and self-hosted environments. I enjoy working with tools like Terraform, Kubernetes, Istio, and GPU computing, and I'm always looking to expand my technical expertise.

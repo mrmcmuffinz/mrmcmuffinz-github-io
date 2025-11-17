@@ -1,4 +1,4 @@
-title = "Abraham Cabrera"
+G-E2DJHQS5DFtitle = "Abraham Cabrera"
 languageCode = "en-us"
 theme = "blowfish"
 defaultContentLanguage = "en"
@@ -66,3 +66,10 @@ rss = ['rss']
 section = ['html', 'rss']
 taxonomy = ['html', 'rss']
 term = ['html', 'rss']
+
+[services]
+  [services.disqus]
+    shortname = "abrahamcabrera-github-io"
+
+  [services.googleAnalytics]
+    id = 'G-E2DJHQS5DF'
