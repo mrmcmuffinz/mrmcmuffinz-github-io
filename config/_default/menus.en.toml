@@ -72,3 +72,8 @@
   name  = "Contact"
   url   = "/contact/"
   weight = 50
+
+[[main]]
+  name = "Privacy"
+  url = "/privacy/"
+  weight = 30

@@ -1,9 +1,9 @@
 +++
-title = "About"
-menu = "main"
-weight = 10
-showComments = false
-showPagination = false
+title           = "About"
+menu            = "main"
+weight          = 10
+showComments    = false
+showPagination  = false
 showDate        = false
 showReadingTime = false
 showWordCount   = false
