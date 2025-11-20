@@ -13,10 +13,10 @@ disableTextInHeader = false
 hotlinkFeatureImage = false
 fingerprintAlgorithm = "sha512"
 description = "DevOps, homelab, and automation notes by Abraham Cabrera."
-defaultSocialImage = "img/social-card.png"
 giteaDefaultServer = "https://git.fsfe.org"
 forgejoDefaultServer = "https://v11.next.forgejo.org"
 customCSS = ["css/custom.css"]
+images = ["img/social-default.png"]
 
 [header]
 layout = "basic"
