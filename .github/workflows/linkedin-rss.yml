@@ -1,7 +1,7 @@
 name: Linkedin blog post workflow
 
-permissions:
-  contents: write
+#permissions:
+#  contents: write
 
 on:
   schedule:
@@ -12,13 +12,11 @@ jobs:
   linkedin_rss_job:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           persist-credentials: true 
-
       - name: Post latest blog post to LinkedIn
         uses: Arisamiga/Linkedin-RSS@master
         with:
