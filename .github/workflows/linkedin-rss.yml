@@ -18,7 +18,7 @@ jobs:
         with:
           persist-credentials: true 
       - name: Post latest blog post to LinkedIn
-        uses: Arisamiga/Linkedin-RSS@master
+        uses: mrmcmuffinz/Linkedin-RSS/@fix/push-commit
         with:
           feed_list: "https://mrmcmuffinz.github.io/posts/index.xml"
           ln_access_token: "${{ secrets.LINKEDIN_ACCESS_TOKEN }}"
