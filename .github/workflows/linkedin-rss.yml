@@ -27,3 +27,8 @@ jobs:
           commit_user: "linkedin-bot"
           commit_email: "19247363+mrmcmuffinz@users.noreply.github.com"
           commit_message: "Update last LinkedIn post marker"
+      - name: Show .lastPost.txt AFTER
+        run: |
+          echo "=============== Checking on .github/.lastPost.txt"
+          ls -la .github
+          cat .github/.lastPost.txt || true
