@@ -22,7 +22,7 @@ jobs:
         with:
           feed_list: "https://mrmcmuffinz.github.io/posts/index.xml"
           ln_access_token: "${{ secrets.LINKEDIN_ACCESS_TOKEN }}"
-          embed_image: "https://mrmcmuffinz.github.io/images/social-card.png"
+          embed_image: "https://mrmcmuffinz.github.io/img/social-default.png"
           last_post_path: ".github/.lastPost.txt"
           commit_user: "linkedin-bot"
           commit_email: "19247363+mrmcmuffinz@users.noreply.github.com"
